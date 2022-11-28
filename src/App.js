@@ -89,25 +89,25 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path="/" element={<HomePage />}/>
-          <Route path='/searchResult/:make/:model/:yearFrom/:yearTo/:priceFrom/:priceTo' element={<SearchResult />} />
-          <Route path='/displayItem/:itemId' element={<DisplayItem />}/>
-          <Route path='/displayItem/:itemid/:modelName' element={<DisplaySubItem />}/>
-          <Route path='/auction' element={<HowToBuyFromAuction />}/>
-          <Route path='/auction/:search' element={<HowToBuyFromAuction />}/>
-          <Route path='/auction/:make/:model/:yearTo' element={ <HowToBuyFromAuction /> }/>
-          <Route path='/auction/:make/:model/:yearFrom/:yearTo/:priceFrom/:priceTo' element={ <HowToBuyFromAuction /> }/>
-          <Route path='/parts' element={<HowToBuyParts />}/>
-          <Route path='/safety&advice' element={<Safety />}/>
-          <Route path='/terms&conditions' element={<Terms />}/>
-          <Route path='/register' element={<RegisterMain />}/>
-          <Route path='/register-individual' element={<RegisterIndividual />}/>
-          <Route path='/register-trader' element={<RegisterTrader />}/>
-          <Route path='/login' element={ <Login />} />
-          <Route path='/profile' element={ <Profile /> } />
-          <Route path='/testimonial' element={<Testimonial />}/>
-          <Route path='/feedback' element={<FeedBack />} />
-          <Route path='/contactus' element={<ContactUs />}/>
-          <Route path='/aboutus' element={<AboutUS /> } />
+          <Route path='searchResult/:make/:model/:yearFrom/:yearTo/:priceFrom/:priceTo' element={<SearchResult />} />
+          <Route path='displayItem/:itemId' element={<DisplayItem />}/>
+          <Route path='displayItem/:itemid/:modelName' element={<DisplaySubItem />}/>
+          <Route path='auction' element={<HowToBuyFromAuction />}/>
+          <Route path='auction/:search' element={<HowToBuyFromAuction />}/>
+          <Route path='auction/:make/:model/:yearTo' element={ <HowToBuyFromAuction /> }/>
+          <Route path='auction/:make/:model/:yearFrom/:yearTo/:priceFrom/:priceTo' element={ <HowToBuyFromAuction /> }/>
+          <Route path='parts' element={<HowToBuyParts />}/>
+          <Route path='safety&advice' element={<Safety />}/>
+          <Route path='terms&conditions' element={<Terms />}/>
+          <Route path='register' element={<RegisterMain />}/>
+          <Route path='register-individual' element={<RegisterIndividual />}/>
+          <Route path='register-trader' element={<RegisterTrader />}/>
+          <Route path='login' element={ <Login />} />
+          <Route path='profile' element={ <Profile /> } />
+          <Route path='testimonial' element={<Testimonial />}/>
+          <Route path='feedback' element={<FeedBack />} />
+          <Route path='contactus' element={<ContactUs />}/>
+          <Route path='aboutus' element={<AboutUS /> } />
         </Routes>
         <Footer />
       </BrowserRouter>
