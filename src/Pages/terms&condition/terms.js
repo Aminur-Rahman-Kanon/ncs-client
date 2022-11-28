@@ -2,8 +2,6 @@ import React from "react";
 import styles from './terms.module.css';
 
 const terms = () => {
-
-
     return (
         <div className={StyleSheet.main}>
             <div className={styles.caution}>

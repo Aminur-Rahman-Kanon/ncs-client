@@ -170,7 +170,7 @@ const Login = () => {
 
     const googleSignIn = () => {
         setSpinner(true);
-        window.location.href = 'https://nihonchukosha.onrender.com/auth/google';
+        window.location.href = 'https://ncs-api.onrender.com/auth/google';
     }
 
     const msg = notification === 'network error' ? <div>
