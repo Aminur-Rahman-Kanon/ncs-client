@@ -63,7 +63,7 @@ function App() {
   
   return (
     <div className={styles.App}>
-      <BrowserRouter>
+      <BrowserRouter basename='/'>
       <div className={styles.contactLink}>
         <div className={styles.bot} onMouseOver={() => setShowContact(true)} onMouseOut={() => setShowContact(false)}>
           <img src={sadFace} alt="nihon chuko sha" className={styles.sadFace} style={ !showContact ? {display: 'block'}: {display: 'none'}}/>
