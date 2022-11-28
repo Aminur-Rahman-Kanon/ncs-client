@@ -47,6 +47,10 @@
     flex-flow: column;
 }
 
+.details h3 {
+    text-align: center;
+}
+
 .btn {
     height: 40px;
     width: 150px;
