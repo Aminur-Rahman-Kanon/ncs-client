@@ -1,0 +1,18 @@
+.main {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mission, .vision, .overview {
+    width: 90%;
+    margin: 50px auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+.mission p, .vision p, .overview p {
+    font-size: 15px;
+    letter-spacing: 1px;
+}

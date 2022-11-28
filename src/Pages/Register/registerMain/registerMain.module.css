@@ -1,0 +1,72 @@
+.main {
+    width: 100%;
+}
+
+.registerType {
+    width: 90%;
+    margin: 50px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.type {
+    text-decoration: none;
+    width: 35%;
+    max-width: 300px;
+    min-width: 190px;
+    margin: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.type:hover {
+    background-color: rgb(219, 137, 65);
+    color: white;
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 12px 8px rgb(243, 158, 1);
+}
+
+.type:hover > .fontAwesome {
+    color: white;
+}
+
+.type:hover > .details {
+    color: white;
+}
+
+.fontAwesome {
+    font-size: 50px;
+    color: grey;
+    margin: 20px;
+}
+
+.details {
+    height: 25px;
+    color: grey;
+    margin: 30px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .registerType {
+        flex-flow: column;
+    }
+
+    .type {
+        width: 85%;
+        min-width: unset;
+        padding: 10px;
+    }
+
+   
+}

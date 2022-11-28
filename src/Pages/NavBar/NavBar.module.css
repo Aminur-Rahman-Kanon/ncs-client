@@ -1,0 +1,187 @@
+.Main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.Logo img {
+    height: 90px;
+    width: 230px;
+}
+
+nav {
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.toggleNav {
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    border: 1px solid grey;
+    background-color: rgb(71, 69, 69);
+    width: 65%;
+    height: 100vh;
+    z-index: 1000;
+}
+
+.toggleList {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    padding: 0;
+    height: 200px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.toggleList a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: darkgrey;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+
+.toggleList a:hover {
+    border: 1px solid rgb(209, 119, 28);
+    box-shadow: 1px 1px 3px 1px rgb(209, 119, 28);
+    color: rgb(223, 137, 52);
+}
+
+
+.NavList {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.NavList a {
+    display: block;
+    margin: 0 5px;
+    padding: 6px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: rgb(54, 54, 54);
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.NavList a:hover {
+    box-shadow: 1px 1px 5px 1px rgb(209, 119, 28);
+}
+
+.Input {
+    display: block;
+    height: 30px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    min-width: 120px;
+    text-align: center;
+}
+
+.childRoutes1 {
+    position: absolute;
+    top: 35px;
+    left: -20px;
+    border: 1px solid #dfdddd;
+    background-color: #ffffff;
+    height: 120px;
+    border-radius: 20px;
+    display: none;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 250px;
+}
+
+.childRoutes2 {
+    position: absolute;
+    top: 35px;
+    left: 93px;
+    border: 1px solid #dfdddd;
+    background-color: #ffffff;
+    height: 190px;
+    border-radius: 20px;
+    display: none;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 250px;
+}
+
+.childRoutes1 a, .childRoutes2 a {
+    margin: 5px 0;
+}
+
+#howToBuy:hover ~ #child1 {
+    display: flex;
+}
+
+#help:hover ~ .childRoutes2 {
+    display: flex;
+}
+
+.childRoutes2:hover {
+    display: flex;
+}
+
+#child1:hover {
+    display: flex;
+}
+
+.active {
+    border: 1px solid rgb(223, 137, 52)!important;
+    box-shadow: 1px 1px 2px 1px rgb(223, 137, 52);
+}
+
+@media (max-width: 940px) {
+    nav {
+        display: none;
+    }
+
+    .Input {
+        width: 70%;
+    }
+
+    .childRoutes1 {
+        left: unset;
+        top: 20px;
+        right: 100px;
+        background-color: #474545;
+        border: 1px solid grey;
+    }
+
+    .childRoutes2 {
+        left: unset;
+        top: 35px;
+        right: 110px;
+        border: 1px solid grey;
+        background-color: #474545;
+    }
+}
+
+@media (max-width: 465px){
+    .toggleNav {
+        width: 50%;
+    }
+    .childRoutes1, .childRoutes2 {
+        width: 225px;
+    }
+}

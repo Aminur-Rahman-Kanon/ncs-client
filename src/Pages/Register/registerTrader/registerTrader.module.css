@@ -1,0 +1,420 @@
+.main {
+    width: 100%;
+}
+
+.caution {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cautionHeader {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.cautionBtn {
+    height: 40px;
+    width: 100px;
+    margin: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.cautionBtn:hover {
+    border: 1px solid rgb(224, 118, 24);
+    color: rgb(224, 118, 24);
+    box-shadow: 1px 1px 12px 1px rgb(224, 118, 24);
+}
+
+.registration {
+    width: 90%;
+    margin: 40px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.registrationHeader {
+    font-size: 18px;
+}
+
+.regMsg {
+    font-size: 15px;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.formSection {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.form1, .form2, .form3 {
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    align-items: unset;
+}
+
+.form4 {
+    width: 45%;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.textAreaLabel {
+    width: 115px;
+    font-size: 13px;
+    margin-right: 8px;
+}
+
+.textarea {
+    width: 64%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.fields {
+    width: 100%;
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.emailFields {
+    width: 100%;
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.emailField {
+    width: 66%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.emailInput {
+    width: 98%;
+    height: 25px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.wrongEmailInput {
+    width: 98%;
+    height: 25px;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.userExist {
+    margin: 5px;
+    font-size: 13px;
+}
+
+.passwordField {
+    width: 100%;
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.label {
+    width: 25%;
+    font-size: 13px;
+}
+
+#required::after {
+    content: '*';
+    color: red;
+    font-size: 20px;
+    position: relative;
+    top: 6px;
+    right: -5px;
+}
+
+.input {
+    width: 65%;
+    height: 25px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.passwordFields {
+    width: 66%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.passwordInput {
+    width: 98%;
+    height: 25px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.wrongPasswordInput {
+    width: 98%;
+    height: 25px;
+    border: 1px solid red;
+    border-radius: 5px;
+    
+}
+
+.passwordMsg {
+    margin: 0;
+    font-size: 13px;
+    text-align: center;
+}
+
+.wrongInput {
+    width: 65%;
+    height: 25px;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.country {
+    width: 67%;
+    height: 30px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.submit {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.submitBtn {
+    height: 40px;
+    width: 100px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    animation: activate 0.3s ease-out forwards;
+}
+
+.submitBtn:hover {
+    color: rgb(224, 118, 24);
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 12px 1px rgb(224, 118, 24);
+}
+
+.submitBtnDisable {
+    height: 40px;
+    width: 100px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    background-color: rgb(224, 221, 221);
+    cursor: not-allowed;
+    animation: deActivate 0.3s ease-out forwards;
+}
+
+.or {
+    font-size: 13px;
+}
+
+.login {
+    text-decoration: none;
+    color: grey;
+}
+
+.login:hover {
+    animation: zoom 0.3s ease-out forwards;
+}
+
+.userChoiceMain {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.userChoiceBtns {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userChoiceBtn {
+    text-decoration: none;
+    color: #522e4c;
+    margin: 0 10px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.userChoiceBtn:hover {
+    color: black;
+}
+
+.checkAnimation {
+    width: 66%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    animation: check 0.3s ease-out forwards;
+    background-color: rgb(233, 174, 174);
+    border-radius: 8px;
+}
+
+
+.emailField:focus {
+    width: 66%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    animation: check 0.3s ease-out forwards;
+    background-color: rgb(233, 174, 174);
+    border-radius: 8px;
+}
+
+.spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 195px;
+    height: 195px;
+    background-color: rgb(102 102 102 / 89%);
+    border-radius: 24px;
+}
+
+.reloadBtn {
+    height: 35px;
+    width: 100px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: lightgray;
+    color: rgb(87, 87, 87);
+    cursor: pointer;
+}
+
+.reloadBtn:hover {
+    background-color: rgb(224, 224, 224);
+    color: rgb(36, 35, 35);
+    box-shadow: 1px 1px 12px 1px rgb(224, 118, 24);
+}
+
+.checkAnimation:focus {
+    animation: check1 0.3s ease-out forwards;
+}
+
+@keyframes check {
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+@keyframes check1 {
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+@keyframes zoom {
+    100% {
+        transform: scale(1.5);
+        color: rgb(224, 118, 24);
+    }
+}
+
+@keyframes activate {
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+@keyframes deActivate {
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+@media (max-width: 1088px) {
+    .form1, .form2, .form3 {
+        width: 45%;
+    }
+}
+
+@media (max-width: 733px) {
+    .form1, .form2, .form3 {
+        width: 80%;
+    }
+
+    .formSection {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width:733px) {
+    .form4 {
+        width: 80%;
+    }
+
+
+    .textAreaLabel {
+        width: 25%;
+    }
+}

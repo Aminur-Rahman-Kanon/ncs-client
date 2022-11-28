@@ -1,0 +1,611 @@
+.Main {
+    width: 100%;
+}
+
+.Caution {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.userInput:focus, .inputFields:focus {
+    animation: focus 0.3s ease-out forwards;
+}
+
+.makeParts:focus {
+    animation: focus 0.3s ease-out forwards;
+}
+
+.wrongInput {
+    border: 1px solid rgb(250, 35, 35);
+    width: 100%;
+    height: 25px;
+}
+
+.wrongInputs {
+    width: 80%;
+    height: 25px;
+    border: 1px solid red;
+}
+
+.wrongTextarea {
+    border: 1px solid red;
+}
+
+.wrongRadioBtn {
+    border-radius: 10px;
+    background-color: #ffb3b3;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputFields {
+    height: 25px;
+    width: 80%;
+    border: 1px solid grey;
+}
+
+@keyframes focus {
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+.ContactBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 40px;
+    width: 110px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: white;
+    color: grey;
+    cursor: pointer;
+}
+
+.ContactBtn:hover {
+    border: 1px solid rgb(224, 119, 18);
+    box-shadow: 0px 0px 10px 1px rgb(224, 119, 18);
+    color: rgb(224, 119, 18);
+}
+
+
+.inquiryFormMain {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+.inquiryFormMain .inquiryForm {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.inquiryFormMain .inquiryForm form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+}
+
+.inquiryFormMain .inquiryForm form h3 {
+    text-align: center;
+}
+
+.inquiryFormMain .inquiryForm h3::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    padding-top: 20px;
+    border-bottom: 2px solid darkred;
+}
+
+.inquiryFormMain .inquiryForm form .row {
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+
+.rowMake, .rowYear, .rowEngine, .rowShipping {
+    width: 95%;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rowMake .innerRow, .rowYear .innerRow, .rowEngine .innerRow {
+    width: 50%;
+    margin: 0 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label {
+    width: 25%;
+    font-size: 15px;
+}
+
+.condition {
+    width: 65%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rowShipping .innerRow {
+    width: 100%;
+    margin: 0 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#shippingMethod {
+    width: 65%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.inputField {
+    width: 65%;
+}
+
+
+.userInput {
+    height: 25px;
+    width: 100%;
+    border: 1px solid grey;
+}
+
+
+.labelCondition {
+    width: 25%;
+}
+
+
+.rowShipping .labelShipping {
+    width: 25%;
+}
+
+
+.nameInputField {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.rowShipping .innerRow .inputField label {
+    width: 60px;
+    margin: auto;
+}
+
+
+.rowMessage {
+    width: 95%;
+    margin: 10px auto;
+    padding: 5px;
+    display: flex;
+    font-weight: 600;
+}
+
+.rowMessage label {
+    width: 22%;
+    margin: 0 5px;
+    padding: 0 5px;
+    letter-spacing: 1.5px;
+}
+
+.msgType {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.tick {
+    margin: 8px auto;
+}
+
+.rowMessage .messageForm {
+    width: 72%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+}
+
+
+.rowMessage .messageForm label {
+    font-size: 12px;
+    text-align: left;
+    width: 100%;
+}
+
+.rowMessage .messageForm input {
+    margin-right: 10px;
+}
+
+.rowMessage .messageForm #message {
+    border: 1px solid rgb(110, 111, 112);
+}
+
+.rowName, .rowCountry, .rowPort, .rowEmail, .rowPhone, .rowWhatsapp, .rowFinal {
+    width: 95%;
+    margin: auto;
+    padding: 10px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.rowName label {
+    width: 28%;
+    height: 25px;
+}
+
+.rowName select {
+    width: 35%;
+    height: 30px;
+}
+
+.rowName #name {
+    height: 25px;
+    width: 80%;
+    margin-left: 10px;
+}
+
+.rowCountry label {
+    height: 25px;
+    width: 28%;
+}
+
+.rowCountry select {
+    height: 30px;
+    width: 80%;
+}
+
+.rowPort label {
+    height: 25px;
+    width: 28%;
+}
+
+.rowPort .port {
+    width: 79.3%;
+    height: 25px;
+}
+
+.rowEmail label {
+    width: 28%;
+    height: 25px;
+}
+
+.rowPhone label {
+    width: 28%;
+    height: 25px;
+}
+
+
+.rowWhatsapp label {
+    width: 28%;
+    height: 25px;
+}
+
+
+.rowFinal p {
+    height: 25px;
+    width: 26%;
+    text-align: start;
+}
+
+.rowFinal label {
+    height: 25px;
+    width: 33%;
+}
+
+
+.redLabel::after {
+    content: "*";
+    color: red;
+    font-size: 20px;
+}
+
+.personInputField {
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.personValue {
+    width: auto!important;
+    height: auto!important;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.formHeadingMain {
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 1px;
+}
+
+.formHeadingMain h3::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    padding-top: 20px;
+    border-bottom: 2px solid darkred;
+}
+
+.formHeadingSub {
+    width: 90%;
+}
+
+.formHeaders h4 {
+    font-weight: 600;
+}
+
+.submitBtn {
+    height: 40px;
+    width: 120px;
+    margin-top: 30px;
+    background-color: white;
+    color: rgb(224, 119, 18);
+    border-radius: 10px;
+    cursor: pointer;
+    animation: btnFocusActive 0.3s ease-out forwards
+}
+
+.submitBtn:hover {
+    border: 1px solid rgb(224, 119, 18);
+    color: rgb(224, 119, 18);
+    box-shadow: 0px 0px 12px 2px rgb(224, 119, 18);
+}
+
+.submitBtnDisabled {
+    height: 40px;
+    width: 120px;
+    margin-top: 30px;
+    background-color: white;
+    color: grey;
+    border-radius: 10px;
+    cursor: not-allowed;
+    animation: btnFocusDeactive 0.3s ease-out forwards
+}
+
+.partsImg {
+    width: 95%;
+    height: 420px;
+    background-image: url('../../Assets/parts.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.Ncs {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Ncs h2 {
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.Ncs h2::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 45%;
+    padding-top: 10px;
+    border-bottom: 2px solid rgb(146, 10, 10);
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 20%;
+    display: flex;
+    flex-flow: column;
+    margin: 0 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.fontAwesome {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #73777b1f;
+}
+
+.font {
+    font-size: 55px;
+    color: rgb(224, 119, 18);
+}
+
+.closeModalBtn {
+    height: 35px;
+    width: 100px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    background-color: rgb(226, 224, 224);
+    color: grey;
+    cursor: pointer;
+}
+
+.closeModalBtn:hover {
+    background-color: white;
+}
+
+.spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 195px;
+    height: 195px;
+    background-color: rgb(102 102 102 / 89%);
+    border-radius: 24px;
+}
+
+@keyframes btnFocusActive {
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+@keyframes btnFocusDeactive {
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+
+@media (max-width: 950px) {
+    
+    .inquiryFormMain {
+        flex-direction: column;
+    }
+
+    .formHeadingMain {
+        margin: 0 auto 30px;
+    }
+
+    .inquiryForm {
+        margin: 0 auto;
+    }
+    .formHeadingMain h3 {
+        padding: 50px 0 20px 0;
+    }
+
+    .cards {
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+    
+}
+
+@media (max-width: 760px) {
+    .labelMake, .labelModel, .labelMfg, .labelChasis, .labelEngine, .labelCondition {
+        width: 100px;
+    }
+    
+    #makeParts, #modelParts {
+        width: 160px;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .rowMake, .rowYear {
+        flex-direction: column;
+      }
+    
+      .rowMake .innerRow, .rowYear .innerRow {
+        width: 100%;
+      }
+      
+      .rowMake .innerRow .inputField, .rowYear .innerRow .inputField {
+        width: 73%;
+      }
+    
+      #makeParts, #modelParts {
+        width: 100%;
+      }
+    
+      .rowYear .innerRow #mfcYear, .rowYear .innerRow #chasisNo {
+        width: 73%;
+      }
+    
+      .rowMake .innerRow .inputField input {
+        width: 100%;
+      }
+    
+      .userInput {
+        width: 100%;
+      }
+    
+      .rowMake, .rowYear, .rowEngine, .rowShipping {
+        flex-direction: column;
+      }
+    
+      .rowMake .innerRow, .rowYear .innerRow, .rowEngine .innerRow {
+        width: 100%;
+      }
+    
+      .rowEngine .innerRow #engineModel {
+        width: 73%;
+      }
+    
+      #chasisNo {
+        width: 75%;
+      }
+}

@@ -1,0 +1,15 @@
+.spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 195px;
+    height: 195px;
+    background-color: rgb(102 102 102 / 89%);
+    border-radius: 24px;
+}

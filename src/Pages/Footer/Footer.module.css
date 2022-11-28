@@ -1,0 +1,146 @@
+.Main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #3d3d3d;
+    color: white;
+}
+
+.Category {
+    width: 25%;
+    min-width: 210px;
+    display: flex;
+    flex-flow: column;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.socialCategory {
+    margin-top: 50px;
+    width: 25%;
+    min-width: 210px;
+    display: flex;
+    flex-flow: column;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.Category h4 {
+    font-size: 20px;
+}
+
+.Category ul {
+    padding: 0;
+    display: flex;
+    width: 80%;
+    /* flex-flow: column; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.Category ul a {
+    width: 24%;
+    min-width: 65px;
+    /* text-align: center; */
+    color: darkgray;
+    text-decoration: none;
+    display: block;
+    margin: 10px;
+}
+
+.socialCategory ul a {
+    color: darkgrey;
+}
+
+.Category ul a:hover {
+    color: aliceblue;
+    font-weight:900;
+    animation: move 0.4s ease-out forwards
+}
+
+
+.ContactUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.SocialLink {
+    width: 95%;
+    flex-flow: row !important;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.SocialLink a {
+    margin: 0 10px !important;
+}
+
+.ContactUs img {
+    height: 70px;
+    width: 80px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.Font {
+    font-size: 35px;
+}
+
+.Font:hover {
+    color: aliceblue;
+    font-weight:900;
+    animation: move 0.4s ease-out forwards
+}
+
+.whatsappContainer {
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes move {
+    100% {
+        transform: scale(1.4);
+    }
+}
+
+@media (max-width: 849px) {
+    .Category ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 629px) {
+    .Category ul {
+        justify-content: center;
+    }
+
+    .socialCategory {
+        width: 100%;
+    }
+
+    .SocialLink {
+        width: 80%;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 419px) {
+    .Category {
+        width: 100%;
+    }
+
+    .Category ul {
+        justify-content: space-between;
+    }
+}

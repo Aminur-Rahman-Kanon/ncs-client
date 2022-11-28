@@ -1,0 +1,222 @@
+.main {
+    width: 98%;
+    margin: 50px auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sidePanel {
+    width: 220px;
+    margin: 5px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.mainContainer {
+    width: 80%;
+    margin: 5px;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultMain {
+    width: 100%;
+}
+
+.resultCount {
+    width: 100%;
+}
+
+.resultCountHeader {
+    margin-left: 30px;
+}
+
+.displayMain {
+    width: 80%;
+    margin: 5px;
+    padding: 25px 0;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modelLink {
+    width: 85%;
+    text-decoration: none;
+    color: grey;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    margin: 15px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cards:hover {
+    animation: sideEffect 0.3s ease-out forwards;
+}
+
+.sendAuctionContainer {
+    align-items: center;
+    width: 200px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    opacity: 0;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: rgb(224, 118, 24);
+    color: white;
+}
+
+
+.sendAuctionContainer.auctionActive {
+    display: flex;
+    animation: auctionMsg 1s ease-out forwards;
+}
+
+.noResult {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes auctionMsg {
+    100% {
+        opacity: 1;
+    }
+}
+
+.sendAuctionFont {
+    margin: 0 10px;
+}
+
+@keyframes sideEffect {
+    100% {
+        box-shadow: 1px 1px 12px 2px rgb(224, 118, 24);
+        color: rgb(224, 118, 24);
+    }
+}
+
+.img {
+    width: 60%;
+    border-radius: 8px;
+}
+
+.h4 {
+    margin: 5px;
+}
+
+.detailsMain {
+    width: 250px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 195px;
+    height: 195px;
+    background-color: rgb(102 102 102 / 89%);
+    border-radius: 24px;
+}
+
+@media (max-width: 1000px) {
+    .sendAuctionContainer {
+        width: 150px;
+    }
+
+    .auctionMsg {
+        margin: 5px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-flow: column;
+    }
+
+    .mainContainer {
+        width: 100%;
+        margin: 5px auto;
+    }
+
+    .sidePanel {
+        height: auto;
+        width: 100%;
+        margin: 15px auto;
+    }
+
+    .displayMain {
+        width: 100%;
+        margin: 10px auto;
+        padding: 5px 0;
+    }
+
+    .cards {
+        width: 90%;
+        flex-flow: column;
+    }
+
+    .img {
+        width: 95%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .displayMain {
+        padding: 15px 0;
+    }
+    .cards {
+        margin: 10px auto;
+        padding: 5px 0;
+    }
+
+    .auctionMsg {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 45px) {
+    .auctionMsg {
+        margin: 4px;
+        font-size: 13px;
+    }
+
+    .sendAuctionFont {
+        margin-right: 5px;
+    }
+}

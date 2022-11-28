@@ -1,0 +1,79 @@
+.main {
+    width: 100%;
+}
+
+.para {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lists {
+    width: 60%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.caution {
+    width: 95%;
+    margin: 50px auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caution h3 {
+    text-align: center;
+    margin: 10px;
+}
+
+
+.cautionBtn {
+    height: 40px;
+    width: 120px;
+    margin: 15px;
+    border: 1px solid grey;
+    color: grey;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.cautionBtn:hover {
+    border: 1px solid rgb(224, 118, 24);
+    box-shadow: 1px 1px 2px 1px rgb(224, 118, 24);
+    color: rgb(224, 118, 24);
+}
+
+.terms, .liability, .others {
+    width: 95%;
+    margin: 50px auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ol li {
+    margin: 5px;
+}
+
+.terms h2, .liability h2, .others h2 {
+    text-align: center;
+}
+
+.terms h2::after, .liability h2:after, .others h2::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    padding-top: 20px;
+    border-bottom: 2px solid darkred;
+}
+
+@media (max-width: 580px) {
+    .lists {
+        width: 90%;
+    }
+}
