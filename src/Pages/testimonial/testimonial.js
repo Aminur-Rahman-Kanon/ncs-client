@@ -5,6 +5,7 @@ import { faCar, faCircle, faX, faMoneyBill1Wave, faShieldHalved, faHeadset, faCe
 import { faStar } from '@fortawesome/free-regular-svg-icons';
 import { Link } from 'react-router-dom';
 import Spinner from '../Others/spinner/spinner';
+import Modal from '../Others/modal/modal';
 
 const Testimonial = () => {
 
@@ -15,6 +16,8 @@ const Testimonial = () => {
     const [showFeedback, setShowFeedback] = useState(true);
     
     const [spinner, setSpinner] = useState(false)
+    
+    const [error, setError] = useState(false);
 
     useEffect(() => {
         setSpinner(true);
@@ -25,7 +28,7 @@ const Testimonial = () => {
             })
             .catch(err => {
                 setSpinner(false);
-                console.log(err);
+                setError(true)
             })
 
     }, [])
@@ -81,8 +84,18 @@ const Testimonial = () => {
                                 className={currentPage === page ++ ? `${styles.circle} ${styles.circleActive}` : styles.circle} />
     })
 
+    const displayError = <div className={styles.errorMsg}>
+        <h3>Something went wrong</h3>
+        <h4>Please check your internet connection</h4>
+        <button onClick={() => window.location.reload()} className={styles.errorMsgBtn}>Retry</button>
+    </div>
+
     return (
         <div className={styles.main}>
+            <Modal toggle={error}>
+                {displayError}
+            </Modal>
+
             <div className={styles.feedback} style={showFeedback ? {display: 'flex'} : {display: 'none'}}>
                 <FontAwesomeIcon icon={ faX } className={styles.xBtn} onClick={() => setShowFeedback(false)}/>
                 <Link to="/feedback" className={styles.feedbackLink}>Leave a feedback</Link>

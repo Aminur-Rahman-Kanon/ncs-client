@@ -1,0 +1,27 @@
+.defaultRouteMain {
+    height: 50vh;
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.returnLink {
+    text-decoration: none;
+    color: rgb(224, 118, 24);
+}
+
+.returnLink:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 420px) {
+    .defaultRouteMain {
+        height: auto;
+    }
+    .defaultRouteImgContainer {
+        width: 95%;
+    }
+}

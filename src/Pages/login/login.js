@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 import styles from './login.module.css';
 import Backdrop from "../Others/backdrop/backdrop";
 import Modal from "../Others/modal/modal";
-import google from '../../Assets/google.png';
 import Spinner from "../Others/spinner/spinner";
 import {storage} from "../Others/firebase/firebaseStorage";
-import { ref, getDownloadURL } from 'firebase/storage'
-
+import { ref, getDownloadURL } from 'firebase/storage';
+import jwtDecode from "jwt-decode";
 
 const Login = () => {
 
@@ -27,7 +26,6 @@ const Login = () => {
     const [notification, setNotification] = useState(null);
 
     useEffect(() => {
-
         if (email.length >= 5 && password.length >=8) {
             setBtnDisable(false);
         }
@@ -38,7 +36,6 @@ const Login = () => {
     }, [email, password]);
 
     useEffect(() => {
-
         if (email.length > 0) {
     
             const check1 = email.includes('@');
@@ -58,8 +55,30 @@ const Login = () => {
         }
     }, [email])
 
+    const handleGoogleLogin = (response) => {
+        var user = jwtDecode(response.credential)
+        user['category'] = 'guest'
+        sessionStorage.setItem('user', JSON.stringify(user));
+        window.location.assign('/');
+    }
+
     useEffect(() => {
         window.scrollTo(0, 0);
+
+        /* global google */
+        google.accounts.id.initialize({
+            client_id: "307027393655-qmq2ljpoucpe2gah288c9joo1n3eq2rs.apps.googleusercontent.com",
+            callback: handleGoogleLogin
+        })
+
+        google.accounts.id.renderButton(
+            document.getElementById('google-btn'),
+            {
+                theme: 'outline', size: 'large'
+            }
+        );
+
+        google.accounts.id.prompt();
     }, [])
 
     const inputHandler = (event, id) => {
@@ -118,7 +137,6 @@ const Login = () => {
 
     const submitLogin = (event) => {
         event.preventDefault();
-        
         setSpinner(true);
 
         fetch('https://ncs-api.onrender.com/login', {
@@ -168,11 +186,6 @@ const Login = () => {
         });
     }
 
-    const googleSignIn = () => {
-        setSpinner(true);
-        window.location.href = 'https://ncs-api.onrender.com/auth/google';
-    }
-
     const msg = notification === 'network error' ? <div>
         <p>Something went wrong, please reload the page</p>
         <button className={styles.modalBtn} onClick={ () => window.location.reload() }>Reload</button>
@@ -208,7 +221,6 @@ const Login = () => {
                         <div className={styles.inputField} id="email">
                             <input type="text"
                                     id="email"
-                                    // style={emailValidity ? {border: '1px solid grey'} : {border: '1px solid red'}}
                                     className={notification === "user not found" || !emailValidity? `${styles.input} ${styles.wrongInput}` : styles.input}
                                     onChange={(event) => inputHandler(event, 'email')}
                                     />
@@ -226,16 +238,14 @@ const Login = () => {
                                     onChange={(event) => inputHandler(event, 'password')}
                                     />
                             <p style={{color: 'red', margin: '2px'}}>{passwordErrorHandler}</p>
-
                         </div>
                     </div>
 
                     <div className={styles.submit}>
                         <button disabled={btnDisable} className={!btnDisable ? styles.btn : styles.btnDisable}>Login</button>
 
-                        <div className={styles.google} onClick={googleSignIn}>
-                            <img src={google} alt="google" className={styles.googleFont}/>
-                            <p className={styles.googleSignIn}>Login with Google</p>
+                        <div className={styles.google}>
+                            <div id="google-btn" className={styles.googleBtn}></div>
                         </div>
 
                         <div className={styles.msg}>
@@ -243,7 +253,6 @@ const Login = () => {
                             <Link to="/register" className={styles.link}>Sign Up</Link>
                         </div>
                     </div>
-                    
                 </form>
             </div>
         </>

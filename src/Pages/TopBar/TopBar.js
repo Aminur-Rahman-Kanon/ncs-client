@@ -82,17 +82,17 @@ const TopBar = ( props ) => {
             //displaying google user information
             loginUser = <div className={styles.userInfo}>
                 <div className={styles.userPicHeader}>
-                    <Link to="/profile"><img src={ userType.img } alt="user image" className={styles.userPic} referrerPolicy="no-referrer"/></Link>
+                    <Link to="/profile"><img src={ userType.picture } alt="user image" className={styles.userPic} referrerPolicy="no-referrer"/></Link>
                 </div>
                 <div className={styles.profile}>
                     <div className={styles.userBio}>
-                        <p className={styles.userDetails}>{userType.firstName}</p>
-                        <p className={styles.userDetails}>{userType.lastName}</p>
+                        <p className={styles.userDetails}>{userType.given_name}</p>
+                        <p className={styles.userDetails}>{userType.family_name}</p>
                     </div>
                     <button onClick={() => {
                         window.sessionStorage.removeItem('user');
                         props.setloggedOut()
-                        window.location.href = 'https://nihonchukosha.onrender.com/logout';
+                        window.location.assign('/login')
                     }} className={styles.logOutBtn}>Log out</button>
                 </div>
             </div>

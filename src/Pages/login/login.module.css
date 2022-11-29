@@ -148,12 +148,12 @@
     margin-top: 10px;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
-    border: 1px solid gray;
-    padding: 10px;
+    border: 1px solid transparent;
     box-sizing: border-box;
+}
+
+.googleBtn {
     border-radius: 10px;
-    cursor: pointer;
 }
 
 .google:hover {

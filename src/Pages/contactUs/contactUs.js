@@ -40,7 +40,7 @@ const ContactUs = () => {
             setEmail(sessionStorageObj['email'])
         }
         else {
-            const name = `${sessionStorageObj.name.firstName} ${sessionStorageObj.name.lastName}`
+            const name = `${sessionStorageObj.given_name} ${sessionStorageObj.family_name}`
             setName(name);
             setEmail(sessionStorageObj['email']);
         }
@@ -122,8 +122,6 @@ const ContactUs = () => {
             setBackdrop(false)
         }
     }
-
-
 
     const submitQuery = (event) => {
         event.preventDefault();

@@ -195,7 +195,7 @@ const HowToBuyParts = (props) => {
             setEmail(sessionStorageObj['email'])
         }
         else {
-            setName(`${sessionStorageObj.name.firstName} ${sessionStorageObj.name.lastName}`)
+            setName(`${sessionStorageObj.given_name} ${sessionStorageObj.family_name}`)
             setTitleValidity(false);
             setEmailValidity(true)
             setEmail(sessionStorageObj['email']);

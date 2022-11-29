@@ -78,8 +78,6 @@ const Profile = () => {
         }).catch(err => console.log(err));
     }
 
-    console.log(sessionStorageObj)
-
     useEffect(() => {
 
         window.scrollTo(0, 0);
@@ -114,17 +112,17 @@ const Profile = () => {
                 downloadUserImg();
             }
             else {
-                setFirstNameDisplay(sessionStorageObj.firstName)
-                setLastNameDisplay(sessionStorageObj.lastName)
-                setFirstName(sessionStorageObj.firstName)
-                setLastName(sessionStorageObj.lastName)
+                setFirstNameDisplay(sessionStorageObj.given_name)
+                setLastNameDisplay(sessionStorageObj.family_name)
+                setFirstName(sessionStorageObj.given_name)
+                setLastName(sessionStorageObj.family_name)
                 setCountry(sessionStorageObj.country)
                 setAddress(sessionStorageObj.address)
                 setPhone(sessionStorageObj.phone)
                 setCompany(sessionStorageObj.company)
                 setWebsite(sessionStorageObj.website)
                 setEmail(sessionStorageObj.email)
-                setImg(sessionStorageObj.img)
+                setImg(sessionStorageObj.picture)
                 setCategory(sessionStorageObj.category)
             }
         }
@@ -230,6 +228,17 @@ const Profile = () => {
         } catch (error) {
             console.error("Error while uploading image to server", error);
         };
+    }
+
+    const preventChange = (event) => {
+        event.preventDefault();
+
+        const warning = document.getElementById('warning-info');
+        warning.style.display = 'flex';
+
+        setTimeout(() => {
+            warning.style.display = 'none'
+        }, 2000)
     }
 
     const openDisplayMsg = () => {
@@ -430,7 +439,11 @@ const Profile = () => {
                         </div>
 
                         <div className={styles.btn}>
-                            <button className={styles.submitBtn} onClick={submitChange}>Save Changes</button>
+                            <button className={styles.submitBtn} onClick={ sessionStorageObj.category === 'guest' ? preventChange : submitChange}>Save Changes</button>
+                            
+                            <div className={styles.warningInfo} id="warning-info">
+                                <h4 style={{textAlign: 'center'}}>Google user information cannot be changed</h4>
+                            </div>
                         </div>
                     </div>
                 </form>

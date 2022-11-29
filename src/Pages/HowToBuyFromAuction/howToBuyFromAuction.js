@@ -146,9 +146,9 @@ const HowToBuyFromAuction = () => {
                 }
             }
             else {
-            //category: Gmail user
+            //category: Google user
                 if (params) {
-                    setName(`${sessionStorageObj.firstName} ${sessionStorageObj.lastName}`);
+                    setName(`${sessionStorageObj.given_name} ${sessionStorageObj.family_name}`);
                     setTitleValidity(false);
                     setUserCountry(sessionStorageObj.country);
                     setUserCountryValidity(true)
@@ -849,7 +849,6 @@ const HowToBuyFromAuction = () => {
                     </div>
                 </div>
                 <div className={styles.tableCalanderMain} id={styles.tableLink} ref={calander} style={params.search === 'notFound' ? {display: 'none'} : null}>
-
                     <h2>AUCTION CALANDER</h2>
                     <table>
                         <tbody className={styles.tHeader}>

@@ -1,6 +1,5 @@
 .main {
     width: 100%;
-    position: relative;
 }
 
 .heading {
@@ -52,7 +51,22 @@
     text-align: center;
 }
 
+.errorMsgBtn {
+    height: 35px;
+    width: 100px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    color: grey;
+    cursor: pointer;
+}
+
+.errorMsgBtn:hover {
+    color: rgb(224, 118, 24);
+    border: 1px solid rgb(224, 118, 24);
+}
+
 .reviews {
+    position: relative;
     width: 90%;
     margin: 35px auto;
     display: flex;

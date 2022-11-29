@@ -20,8 +20,6 @@ import { useState } from 'react';
 import Profile from './Pages/profile/profile';
 import DisplayItem from './Pages/displayItem/displayItem';
 import DisplaySubItem from './Pages/displayItem/displaySubItem/displaySubItem';
-import { storage } from './Pages/Others/firebase/firebaseStorage';
-import { ref, getDownloadURL } from 'firebase/storage';
 import SearchResult from './Pages/searchResult/searchResult';
 import facebook from './Assets/facebook.png';
 import email from './Assets/email.png';
@@ -30,40 +28,15 @@ import whatsapp from './Assets/whatsapp.png';
 import ReactWhatsapp from 'react-whatsapp';
 import sadFace from './Assets/sadFace.png';
 import happyFace from './Assets/happyFace.png';
-
+import DefaultRoute from './Pages/Others/defaultRoute/dafultRoute';
 
 function App() {
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const [img, setImg] = useState('');
-
   const [showContact, setShowContact] = useState(false);
-  
-  if (!isLoggedIn) {
-    if (window.location.search !== ''){
-
-      const user =  JSON.parse(decodeURIComponent(window.location.search).split('?')[1]) ? JSON.parse(decodeURIComponent(window.location.search).split('?')[1]) : null
-      
-      if (user.category === 'guest'){
-        window.sessionStorage.setItem('user', JSON.stringify(user));
-        setIsLoggedIn(true);
-      }
-      else if  (user.category === 'modified'){
-        const downloadRef = ref(storage, `${user.category}user/${user.email}`);
-
-        getDownloadURL(downloadRef).then(url => {
-          user.img = url;
-          window.sessionStorage.setItem('user', JSON.stringify( user ))
-          setImg(url)
-        }).catch(err => console.log(err));
-      }
-    }
-  }
   
   return (
     <div className={styles.App}>
-      <BrowserRouter basename='/'>
+      <BrowserRouter>
       <div className={styles.contactLink}>
         <div className={styles.bot} onMouseOver={() => setShowContact(true)} onMouseOut={() => setShowContact(false)}>
           <img src={sadFace} alt="nihon chuko sha" className={styles.sadFace} style={ !showContact ? {display: 'block'}: {display: 'none'}}/>
@@ -85,7 +58,7 @@ function App() {
           </Link>
         </div>
       </div>
-        <TopBar googleImg={ img } />
+        <TopBar />
         <NavBar />
         <Routes>
           <Route exact path="/" element={<HomePage />}/>
@@ -108,6 +81,7 @@ function App() {
           <Route path='/feedback' element={<FeedBack />} />
           <Route path='/contactus' element={<ContactUs />}/>
           <Route path='/aboutus' element={<AboutUS /> } />
+          <Route path="*" element={<DefaultRoute />} />
         </Routes>
         <Footer />
       </BrowserRouter>

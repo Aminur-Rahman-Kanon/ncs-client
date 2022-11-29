@@ -94,10 +94,34 @@
     border-radius: 5px;
 }
 
-
 .fontAwesome {
     font-size: 25px;
     color: rgb(158, 154, 154);
+}
+
+.btn {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.warningInfo {
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #040404ad;
+    color: white;
 }
 
 .submitBtn {
