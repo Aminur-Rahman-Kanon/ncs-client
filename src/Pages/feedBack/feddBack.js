@@ -135,14 +135,11 @@ const FeedBack = (props) => {
     const sessionStorageObj = JSON.parse(sessionStorage.getItem('user'));
 
     if (sessionStorageObj && name === '') {
-        console.log('parent');
         if (sessionStorageObj.hasOwnProperty('_id')) {
-            console.log('child1');
-            setName(sessionStorageObj['firstName'] + ' ' + sessionStorageObj['lastName'])
+            setName(sessionStorageObj.firstName + ' ' + sessionStorageObj.lastName)
         }
         else {
-            console.log('child2');
-            setName(sessionStorageObj['name'][0] + ' ' + sessionStorageObj['name'][1])
+            setName(sessionStorageObj.given_name + ' ' + sessionStorageObj.family_name)
         }
     }
 
@@ -196,7 +193,6 @@ const FeedBack = (props) => {
             openModal();
         })
     }
-
 
     let submitMsg = null;
 
